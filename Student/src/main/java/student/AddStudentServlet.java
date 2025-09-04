@@ -38,10 +38,9 @@ public class AddStudentServlet extends HttpServlet {
             Date dob = Date.valueOf(dobStr);
             InputStream photoStream = photoPart.getInputStream();
 
-            // unique qr code data
+            
             String qrCodeData = name + "-" + System.currentTimeMillis();
 
-            // ✅ Insert into "physics" table instead of "student"
             Class.forName("org.postgresql.Driver");
             try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
                 String sql = "INSERT INTO physics (name, gender, course, dob, photo, qrcode) VALUES (?, ?, ?, ?, ?, ?)";

@@ -37,7 +37,7 @@ public class StudentInfoServlet extends HttpServlet {
         }
 
         try {
-            Class.forName("org.postgresql.Driver"); // load driver
+            Class.forName("org.postgresql.Driver"); // lo
 
             try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS)) {
                 String sql = "SELECT name, gender, course, dob, photo FROM physics WHERE qrcode=?";
