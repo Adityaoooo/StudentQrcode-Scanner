@@ -76,7 +76,7 @@
             <version>1.70</version>
         </dependency>
     </dependencies>
-         <packaging>war</packaging>
+         
 
 
     <build>
@@ -84,4 +84,5 @@
    
     </build>
 </project>
+
 
